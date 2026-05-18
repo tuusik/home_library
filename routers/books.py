@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+from schemas.books import SBook, SBookAdd
 
 router = APIRouter(prefix="/books")
 
