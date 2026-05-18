@@ -1,7 +1,6 @@
 from pydantic import BaseModel, Field, ConfigDict
 
 class SBookBase(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
     title: str
     author: str
     year: int
@@ -13,4 +12,5 @@ class SBookAdd(SBookBase):
 
 class SBook(SBookBase):
     id: int
+    model_config = ConfigDict(from_attributes=True)
 
